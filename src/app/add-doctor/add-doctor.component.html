@@ -1,0 +1,39 @@
+<div class = "col-md-6 offset-md-3">
+<h2>Add Doctor</h2>
+<form (ngSubmit) = "onSubmit()">
+    <div class = "form-group">
+        <label>Doctor ID</label>
+        <input required type = "text" class = "form-control" id = "doctorId"
+            [(ngModel)] = "doctor.doctorId" name = "doctorId">
+    </div>
+
+    <div class = "form-group">
+        <label>Doctor Name</label>
+        <input type = "text" class = "form-control" id = "doctorName"
+            [(ngModel)] = "doctor.doctorName" name = "doctorName">
+    </div>
+
+    <div class = "form-group">
+        <label>Age</label>
+        <input type = "text" class = "form-control" id = "age"
+            [(ngModel)] = "doctor.age" name = "age">
+    </div>
+
+    <div class = "form-group">
+        <label>Gender</label>
+        <input type = "text" class = "form-control" id = "gender"
+            [(ngModel)] = "doctor.gender" name = "gender">
+    </div>
+
+    <div class = "form-group">
+        <label>Specialist</label>
+        <input type = "text" class = "form-control" id = "specialist"
+            [(ngModel)] = "doctor.specialist" name = "specialist">
+    </div>
+
+    <button class = "btn btn-success" type = "submit">Submit</button>
+</form>
+</div>
+<div style = "text-align: center">
+    <h1> {{message}} </h1>
+</div>

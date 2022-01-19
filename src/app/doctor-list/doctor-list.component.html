@@ -1,0 +1,31 @@
+<div>
+    <label for="doc">Doctor</label>
+    <div class = "input-group input-group-sm mb-3">
+        <select (ngModelChange)="selectChange($event)" [(ngModel)]="doc.doctorId">
+            <option value="0">--Select Doctor--</option>
+            <option *ngFor = "let doct of doctors" [ngValue]="doct.doctorId">{{doct.doctorName}}</option>
+        </select>
+    </div>
+    <div>
+        <button (click)="toggleShow()">Show/Hide Doctor</button>
+        <div *ngIf="showTable">
+            <h2> Doctor List </h2>
+            <table class = "table table-striped">
+                <thead>
+                    <tr>
+                        <th>Doctor Name</th>
+                        <th>Specialization Field</th>
+                        <th>Number of Patients Attended</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> {{doc.doctorName}} </td>
+                        <td> {{doc.specialist}} </td>
+                        <td> {{numberOfPatients}} </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>    
+</div>
